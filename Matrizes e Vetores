@@ -1,0 +1,222 @@
+// Tobias Gustavo da Silva Soares - Turma 35 - Generation 
+
+//Exercícios com Vetores[  ] e Matrizes [  ][  ]
+
+//Faça um programa que crie um vetor por leitura com 5 valores de pontuação de uma atividade e o escreva em seguida. Encontre após a maior pontuação e a apresente. 
+
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro contagem
+		real nota[5], maiorNota = 0.0
+
+		para (contagem = 0; contagem <5; contagem++){
+		escreva("Insira a " ,contagem + 1, " ª nota: ")
+		leia(nota[contagem])
+
+	            se(nota[contagem] > maiorNota) {
+				maiorNota = nota[contagem]
+		}
+		}
+		limpa()
+		
+		para (contagem = 0; contagem <5; contagem++){
+		escreva("A ", contagem + 1, " ª nota Ã©: " + nota[contagem]+ "\n")
+		}
+		
+		escreva("\n\nA maior nota Ã©: " + maiorNota+ "\n\n")
+			
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//3. Escreve um programa que lê duas matrizes N1 (4,6) e N2(4,6) e cria:
+//a) Uma matriz M1 cujos elementos serão as somas dos elementos de mesma posição das matrizes N1 e N2;
+//b) Uma matriz M2 cujos elementos serão as diferenças dos elementos de mesma posição das matrizes N1 e N2.
+
+  programa
+{
+	funcao inicio()
+  {
+		  inteiro N1[4][6] , N2[4][6], linha, coluna, M1[4][6]
+
+		            para (linha = 0; linha < 4; linha++) {
+			          para (coluna = 0; coluna < 6; coluna++) {
+		  escreva("Escreva o valor da posicao [ " , linha+1 , " ][ " , coluna+1 , " ] da primeira matriz: " )
+			leia(N1[linha][coluna])	
+		}			
+		}
+		            para (linha = 0; linha < 4; linha++) {
+			          para (coluna = 0; coluna < 6; coluna++) {
+		  escreva("Escreva o valor da posicao [ " , linha+1 , " ][ " , coluna+1 , " ] da segunda matriz: " )
+		  leia(N2[linha][coluna])							
+		}			
+		}
+		            para (linha = 0; linha < 4; linha++) {
+			          para (coluna = 0; coluna < 6; coluna++) {
+			M1[linha][coluna] = (N1[linha][coluna] + N2[linha][coluna])		
+		}			
+		}
+		           para (linha = 0; linha < 4; linha++) {
+			         para (coluna = 0; coluna < 6; coluna++){
+		   escreva("[ ", M1[linha][coluna] , " ]")
+			}
+			escreva("\n")
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//2  - Um dado é lançado 10 vezes e o valor correspondente é anotado. Faça um programa que gere um vetor com os lançamentos, escreva esse vetor. A seguir determine e imprima a média aritmética dos lançamentos, contabilize e apresente também quantas foram as ocorrências da maior pontuação
+
+  programa 
+{
+	funcao inicio() 
+{
+	    inteiro dado[10], maiorDado = 0, quantosMaiorDado = 0 
+	    real soma = 0.0 
+	    logico dadoValido = falso 
+	    
+	    
+	      para (inteiro contagem = 0; contagem < 10; contagem++){
+		
+		
+	      enquanto (dadoValido != verdadeiro) {
+                escreva("\nEscreva o valor de 1 a 6 do" ,contagem+1 " º dado: ")
+                leia(dado[contagem])
+		         
+        se      (dado[contagem]) >= 1 e dado[contagem] < = 6){
+                 dadoValido  = verdadeiro
+                 soma += dado[contagem]
+		         
+	      se      (dado[contagem]) > maiorDado){
+                 maiorDado = dado [contagem]
+                 quantosMaiorDado = 0 
+  }
+		         
+        se      (dado[contagem]) > maiorDado {
+                 quantosMaiorDado++
+  }
+
+        se      (dado[contagem] == maiordado) {
+		             quantosMaiorDado++
+  }
+		  } senao {
+    
+                  dadosValido = falso
+                  escreva("Valor invalido")
+		}
+	}
+}
+
+
+
+/////// TENTATIVA 
+
+
+
+
+
+
+
+
+
+//4.  Crie um programa que receba valores do usuário para preencher uma matriz 3X3, e em seguida, exiba a soma dos valores dela e a soma dos valores da primeira diagonal, ou seja, diagonal principal.
+
+
+
+  programa 
+{
+	funcao inicio()
+{
+	real matriz [3][3], soma = 0.0  somaDiagonal = 0.0 
+		
+        para (inteiro linha = 0; linha < 3; linha++){
+        para(inteiro coluna = 0; coluna < 3; coluna++){
+  escreva("Preencha o valor da casa, [" ,linha+1," ] [" ,coluna+1"]") 
+  leia (matriz[linha][coluna])
+}
+}
+		limpa()
+		
+        para (inteiro linha = 0; linha <3; linha++){
+        para(inteiro coluna = 0; coluna < 3; coluna++){
+        se (linha == coluna){
+        somaDiagonal += matriz[linha][coluna]{
+		        }
+		    }
+		}
+	}
+}
+
+
+
+____________________________________ 2ª Tentativa_____________________________
+
+Programa
+{
+	
+	funcao inicio()
+{
+		inteiro Matriz[3][3], matrizSoma=0, linha, coluna, diagonalSoma=0
+
+		
+		       para (linha = 0; linha < 3; linha++){
+
+			     para(coluna = 0; coluna < 3; coluna ++){
+		   escreva("Valor da Matriz posicao [ " ,linha+1, " ] [ ",coluna+1," ] :")
+		   leia(Matriz[linha][coluna])
+				
+  }				
+  }
+		     limpa()
+
+			      para (linha = 0; linha <3; linha++){
+
+			      para (coluna = 0; coluna <3; coluna++){
+				
+				    matrizSoma += Matriz[linha][coluna]
+				
+				    se(linha == coluna) {
+					  diagonalSoma += Matriz[linha][coluna]
+  }
+				
+  }
+			
+  }
+
+		    escreva("A soma da matriz Ã©: " + matrizSoma)
+		    escreva("\n\nA soma da diagonal da matriz Ã©: " + diagonalSoma +"\n\n")
+  }
+  }
+
